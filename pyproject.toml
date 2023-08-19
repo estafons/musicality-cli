@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "musicality-cli"
+version = "0.1.0"
+description = ""
+authors = ["Stefanos Koutoupis <skoutoupis@scify.org>"]
+readme = "README.md"
+packages = [{include = "musicality_cli"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+musicality = {git = "ssh://git@github.com/estafons/music-exercises.git"}
+click = "^8.1.7"
+
+[tool.poetry.scripts]
+musicality = "musicality_cli.cli:cli"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
